@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@section formcss{
+    <style>
+
+        input{
+
+            width: 300px;
+            height: 40px;
+            border-radius:10px;
+        }
+    </style>
+
+
+}
+<h1>@ViewData["Title"]</h1>
+
+
+
+
+
+<form action="/Contact/AddContact" method="post">
+    <p>Name</p>
+  <input type="text"  />
+
+  <p>Surname</p>
+  <input type="text" />
+
+  <p>Email</p>
+    <input  type="email" />
+
+    <p>Phone</p>
+    <input type="number" />
+    <hr/>
+    <input type="submit" />
+</form>

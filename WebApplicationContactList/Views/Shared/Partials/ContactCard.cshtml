@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "ContactCard";
+}
+
+@model Contact
+
+
+<ul>
+    <li>@Model.Name</li>
+    <li>@Model.Surname</li>
+    <li>@Model.Phone</li>
+
+    <a asp-controller="Contact" asp-action="Details" asp-route-id="@Model.ID"><button>View detail</button></a>
+</ul>
+

@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Contact>
+@section indexcss{
+    <style>
+        .main{
+
+            display:flex;
+            justify-content:space-around;
+
+            li{
+
+                list-style-type:none;
+            }
+
+            ul{
+
+                border:1px solid black;
+                border-radius: 15px;
+                padding: 40px;
+
+            }
+            button{
+
+
+                border:1px solid black;
+                border-radius: 8px;
+                width:200px;
+                height60px;
+                background-color: cornflowerblue;
+            }
+        }
+
+
+    </style>
+}
+   <h1>Contacts</h1>
+
+
+   <div  class="main">
+    @foreach (Contact contact in Model)
+    {
+        @await Html.PartialAsync("Partials/ContactCard", contact)
+
+    }
+   </div>
+   
+
+
